@@ -1,0 +1,17 @@
+services:
+
+  timesheet-api:
+    image: "${APP_TIMESHEET_API_IMAGE_NAME}:${APP_TIMESHEET_API_IMAGE_VERSION}"
+    environment:
+      - DB_USERNAME=${APP_TIMESHEET_DB_USERNAME}
+      - DB_PASSWORD=${APP_TIMESHEET_DB_PASSWORD}
+      - DB_NAME=${APP_TIMESHEET_DB_NAME}
+      - DB_PORT=${APP_TIMESHEET_DB_PORT}
+      - DB_HOST=${APP_TIMESHEET_DB_HOST}
+    ports:
+      - 8010:8008
+
+networks:
+  default:
+    name: ${APP_PROXY_NETWORK}
+    external: true

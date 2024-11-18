@@ -1,0 +1,12 @@
+services:
+
+  message-broker:
+    image: "${APP_MESSAGE_BROKER_IMAGE_NAME}:${APP_MESSAGE_BROKER_IMAGE_VERSION}"
+    environment:
+      - RABBITMQ_DEFAULT_USER=${APP_MESSAGE_BROKER_USERNAME}
+      - RABBITMQ_DEFAULT_PASS=${APP_MESSAGE_BROKER_PASSWORD}
+
+networks:
+  default:
+    name: ${APP_PROXY_NETWORK}
+    external: true

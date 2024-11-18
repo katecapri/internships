@@ -1,0 +1,1847 @@
+{
+	"info": {
+		"_postman_id": "84fe8ade-1500-44be-b77b-89c6ac42fc5d",
+		"name": "Internships",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21520894"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "/user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://cabinet.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/user/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"pepsikolka22@rambler.com\",\n  \"name\": \"string\",\n  \"password\": \"string\",\n  \"appRoleId\": \"eded9ca0-5d3c-460b-ab06-89d30db1b21b\",\n  \"groups\": [\n    {\"id\": \"0573c2fa-8e50-4dc7-8c4c-25b07c94cb5d\"}\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/user/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user/current",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://cabinet.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/user/current/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"current",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user/uuid",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://cabinet.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/user/51596569-8fcb-4976-8be7-eccb6280c2c1/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"51596569-8fcb-4976-8be7-eccb6280c2c1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user/uuid update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"appRoleId\": \"94cbd851-5592-4e35-862d-11a2c603d754\", // APP_USER\n  \"groups\": [\n    {\"id\": \"31db0fb7-b70f-4c43-9619-2139c08209e7\",\n    \"routes\":[{\"id\":\"f127468a-4f1b-49f7-8e15-34caa2cadf8e\"}]} // Стажер\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/user/68eb898b-eb77-4071-b156-c90c42c990d7/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"68eb898b-eb77-4071-b156-c90c42c990d7",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user/uuid delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/user/0e155e93-7487-459b-8236-af8d285c0dd5/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"0e155e93-7487-459b-8236-af8d285c0dd5",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "App Role",
+			"item": [
+				{
+					"name": "/appRoles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/appRole/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"appRole",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/appRoles create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"string\",\n  \"code\": \"string\",\n  \"description\": \"string\",\n  \"permissions\": [{\n                \"id\": \"f137f0cf-08ee-4a12-8b09-855d3ad2feff\",\n                \"level\": \"COMPONENT\",\n                \"targetName\": \"cabinet\",\n                \"entryPoint\": \"\",\n                \"hasAccess\": true,\n                \"createPermission\": true,\n                \"readPermission\": true,\n                \"updatePermission\": true,\n                \"deletePermission\": true,\n                \"viewAllPermission\": true,\n                \"modifyAllPermission\": true\n            }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/appRole/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"appRole",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/appRoles/uuid update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"string2\",\n  \"code\": \"string2\",\n  \"description\": \"string\",\n  \"permissions\": [{\n                \"id\": \"f137f0cf-08ee-4a12-8b09-855d3ad2feff\",\n                \"level\": \"COMPONENT\",\n                \"targetName\": \"cabinet\",\n                \"entryPoint\": \"\",\n                \"hasAccess\": true,\n                \"createPermission\": true,\n                \"readPermission\": true,\n                \"updatePermission\": true,\n                \"deletePermission\": true,\n                \"viewAllPermission\": true,\n                \"modifyAllPermission\": true\n            }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/appRole/4600547f-cc25-463d-8911-2bc4e0dbfb29/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"appRole",
+								"4600547f-cc25-463d-8911-2bc4e0dbfb29",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/appRoles/uuid delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/appRole/38ed23c7-9ee6-4c05-9ae3-25fad497ef9a/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"appRole",
+								"38ed23c7-9ee6-4c05-9ae3-25fad497ef9a",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Place",
+			"item": [
+				{
+					"name": "/direction",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/direction/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"direction",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/direction/uuid",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/direction/d1e71cf9-5a71-4aa5-af35-ef75d1495f8e/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"direction",
+								"d1e71cf9-5a71-4aa5-af35-ef75d1495f8e",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/direction/uuid update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"d3ff7ec9-ce87-4dcd-b5ed-966bb4bce504\",\n    // \"name\": \"Медийный город\",\n    // \"display\": \"{\\\"code\\\":\\\"3cube\\\"}\",\n    \"departments\": [\n        {\n            \"id\": \"4703c130-c6f6-4c75-9124-4954b6839eb7\",\n            \"name\": \"Департамент средств массовой информации\"\n        },\n        {\n            \"id\": \"0fcd97d7-d030-4b8b-b4ae-18a9cfb5bbe3\",\n            \"name\": \"Агентство инноваций Москвы\"\n        },\n        {\n            \"id\": \"912492f7-fbf2-4542-86c2-f1c3fe44b547\",\n            \"name\": \"Выставка достижений народного хозяйства\"\n        },\n        {\n            \"id\": \"ee1f639b-d316-4ced-a32b-94a14919a95e\",\n            \"name\": \"Московское кино\"\n        },\n        {\n            \"id\": \"6617e881-0be9-413f-a62b-d2be7853b5ee\",\n            \"name\": \"Пиар-отделы органов власти\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/direction/d3ff7ec9-ce87-4dcd-b5ed-966bb4bce504/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"direction",
+								"d3ff7ec9-ce87-4dcd-b5ed-966bb4bce504",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/place",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/place/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"place",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/place create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"string\",\n  \"address\": \"string\",\n  \"departments\": [\n        {\n            \"id\": \"d1a354ed-efdc-4919-af06-678a1abfa065\",\n            \"name\": \"Департамент информационных технологий\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/place/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"place",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/place/uuid",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/place/5285bfad-cc0a-447f-8fdf-21af02126650/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"place",
+								"5285bfad-cc0a-447f-8fdf-21af02126650",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/place/uuid update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n//   \"name\": \"string8\",\n  \"address\": \"string2\",\n  \"departments\": [\n        {\n            \"id\": \"d1a354ed-efdc-4919-af06-678a1abfa065\",\n            \"name\": \"Департамент информационных технологий\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/place/72557d77-91cf-4cbe-ae84-869413ef71ef/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"place",
+								"72557d77-91cf-4cbe-ae84-869413ef71ef",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/place/uuid Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/place/5285bfad-cc0a-447f-8fdf-21af02126650/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"place",
+								"5285bfad-cc0a-447f-8fdf-21af02126650",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Points",
+			"item": [
+				{
+					"name": "*points* /points",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "0.0.0.0:8009/api/v1/points/?userId=e67254b1-ce84-4ec2-a68c-8f6e728e91d2",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8009",
+							"path": [
+								"api",
+								"v1",
+								"points",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "e67254b1-ce84-4ec2-a68c-8f6e728e91d2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "*points* /points/sum",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "0.0.0.0:8009/api/v1/points/sum/?userId=3fa85f64-5717-4562-b3fc-2c963f66afa6",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8009",
+							"path": [
+								"api",
+								"v1",
+								"points",
+								"sum",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "*points* /points create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "POINTS_CONSUMER_KEY",
+								"value": "272638b1-eced-4cfa-8249-646ac04e1234",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n  \"eventType\": \"increase\",\n  \"pointsValue\": \"3\",\n  \"reason\": \"string\",\n  \"ownerId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "0.0.0.0:8009/api/v1/points/",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8009",
+							"path": [
+								"api",
+								"v1",
+								"points",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/points/uuid/sum",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://cabinet.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/points/3fa85f64-5717-4562-b3fc-2c963f66afa6/sum/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"points",
+								"3fa85f64-5717-4562-b3fc-2c963f66afa6",
+								"sum",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/points/uuid/history",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://cabinet.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/points/51596569-8fcb-4976-8be7-eccb6280c2c1/history/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"points",
+								"51596569-8fcb-4976-8be7-eccb6280c2c1",
+								"history",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Route",
+			"item": [
+				{
+					"name": "/route",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://cabinet.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/route/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"route",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/route/uuid/request",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://cabinet.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/route/a82067a4-49ec-4b8f-a8c3-d5588c888c95/request/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"route",
+								"a82067a4-49ec-4b8f-a8c3-d5588c888c95",
+								"request",
+								""
+							],
+							"query": [
+								{
+									"key": "routeStepId",
+									"value": "7eaf7d3e-9c98-4e43-b033-dd6e49d4afd2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/route/uuid/user/trainee",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://cabinet.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/route/479e340e-d367-4e21-afb3-ca938c0783db/user/trainee/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"route",
+								"479e340e-d367-4e21-afb3-ca938c0783db",
+								"user",
+								"trainee",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://cabinet.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/request/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"request",
+								""
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://cabinet.hackathon.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"routeId\": \"bb21cafa-3389-47a6-b8b6-4139f98fb014\",\n  \"routeStepId\": \"be5b0df2-7c96-45b1-bdca-8b5ef2f34b0c\",\n  \"fields\": [\n    {\n      \"id\": \"319c2f9f-71f4-433b-be34-d2d318a59353\",\n      \"fieldValue\": \"Россия\"\n    },\n    {\n      \"id\": \"560e8928-ebb8-4f1c-8b3e-5984fa05a192\",\n      \"fieldValue\": \"22\"\n    },\n    {\n        \"id\": \"f31736c3-86f5-4c8c-9c34-8a2bbcaea4ec\",\n        \"fieldValue\": \"true\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/request/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"request",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request/uuid/verificationStatus",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://cabinet.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/request/7acfb197-c449-4edf-90a4-815fb2b121f4/verificationStatus/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"request",
+								"7acfb197-c449-4edf-90a4-815fb2b121f4",
+								"verificationStatus",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/request/uuid/verify",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://cabinet.hackathon.com",
+								"type": "text"
+							},
+							{
+								"key": "API_CONSUMER_KEY",
+								"value": "873497b1-ynbu-8dvs-8876-879th56e7869",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/request/b82068cd-dc0c-43a7-8f63-3b857b8914da/verify/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"request",
+								"b82068cd-dc0c-43a7-8f63-3b857b8914da",
+								"verify",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/template",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/template/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"template",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/template create request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"templateType\": \"internshipSelection\",\n    \"fromGroup\": \"traineeCandidate\",\n    \"toGroup\": \"trainee\",\n    \"templateSteps\": [\n        {\n            \"stepType\": \"request\",\n            \"order\": 1,\n            \"isStart\": true,\n            \"autoVerification\": true,\n            \"pointsValue\": 10,\n            \"fields\": [\n                {\n                    \"fieldName\": \"Гражданство\",\n                    \"fieldType\": \"selectWithInput\",\n                    \"valuesForSelectField\": \"[\\\"Россия\\\", \\\"SELECT_OTHER\\\"]\",\n                    \"mustBeVerified\": true,\n                    \"correctnessCriteria\": \"quality\",\n                    \"verificationValues\": \"Россия\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/template/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"template",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/template create timesheet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"templateType\": \"internship\",\n    \"fromGroup\": \"trainee\",\n    \"toGroup\": \"graduate\",\n    \"templateSteps\": [\n        {\n            \"id\": \"8412c42d-88d6-473c-adbd-b35f79ed3592\",\n            \"stepType\": \"timeSheet\",\n            \"order\": 1,\n            \"isStart\": false,\n            \"autoVerification\": true,\n            \"pointsValue\": 10,\n            \"timeSheetDuration\": 60,\n            \"timeSheetDurationItem\": \"days\",\n            \"minimumFillPercent\": 50\n        },\n        {\n            \"id\": \"4cef9955-6fd5-44ee-9716-d79dc9e42451\",\n            \"stepType\": \"timeSheet\",\n            \"order\": 2,\n            \"isStart\": false,\n            \"autoVerification\": true,\n            \"pointsValue\": 10,\n            \"timeSheetDuration\": 60,\n            \"timeSheetDurationItem\": \"days\",\n            \"minimumFillPercent\": 50\n        },\n        {\n            \"id\": \"c3a34ae5-e8f0-4415-a10b-380e454d83c9\",\n            \"stepType\": \"timeSheet\",\n            \"order\": 3,\n            \"isStart\": false,\n            \"autoVerification\": true,\n            \"pointsValue\": 10,\n            \"timeSheetDuration\": 60,\n            \"timeSheetDurationItem\": \"days\",\n            \"minimumFillPercent\": 50\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/template/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"template",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/template uuid",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/template/6e6a07db-ed23-474f-81f4-1f8dcb4260da/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"template",
+								"6e6a07db-ed23-474f-81f4-1f8dcb4260da",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/template uuid update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"templateType\": \"internshipSelection\",\n    \"fromGroup\": \"traineeCandidate\",\n    \"toGroup\": \"trainee\",\n    \"templateSteps\": [\n        {\n            \"stepType\": \"request\",\n            \"order\": 1,\n            \"isStart\": true,\n            \"autoVerification\": true,\n            \"pointsValue\": 10,\n            \"fields\": [\n                {\n                    \"id\": \"4debf865-4be8-4136-8864-33db05a26eff\",\n                    \"fieldName\": \"Гражданство\",\n                    \"fieldType\": \"selectWithInput\",\n                    \"valuesForSelectField\": \"[\\\"Россия\\\", \\\"SELECT_OTHER\\\"]\",\n                    \"mustBeVerified\": true,\n                    \"correctnessCriteria\": \"quality\",\n                    \"verificationValues\": \"Россия\"\n                }\n            ]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/template/d5388af4-84a3-437f-b6f0-96141526aaa5/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"template",
+								"d5388af4-84a3-437f-b6f0-96141526aaa5",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/template/uuid/launch",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://admin.hackathon.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"dateStart\": \"2024-11-01\",\n  \"dateEnd\": \"2024-11-11\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/template/ea87fec7-51c0-4cb0-890a-d089cef0d309/launch/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"template",
+								"ea87fec7-51c0-4cb0-890a-d089cef0d309",
+								"launch",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Timesheet",
+			"item": [
+				{
+					"name": "*ts* /timesheet",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "TIMESHEET_CONSUMER_KEY",
+								"value": "895482b1-rmiv-7dnb-9974-657sb98s7690",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"eventId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa2\",\n  \"userId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n  \"routeId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n  \"toGenerate\": {\n    \"dateStart\": \"2023-05-24\",\n    \"duration\": 10,\n    \"durationItem\": \"days\"\n  },\n  \"toUpdate\": {\n    \"eventDate\": \"2023-05-24\",\n    \"dayType\": \"dayOff\"\n  },\n  \"eventType\": \"update\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8010/api/v1/timesheet/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8010",
+							"path": [
+								"api",
+								"v1",
+								"timesheet",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "*ts* /timesheet/user_id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "TIMESHEET_CONSUMER_KEY",
+								"value": "895482b1-rmiv-7dnb-9974-657sb98s7690",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8010/api/v1/timesheet/68eb898b-eb77-4071-b156-c90c42c990d7/?routeId=f127468a-4f1b-49f7-8e15-34caa2cadf8e",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8010",
+							"path": [
+								"api",
+								"v1",
+								"timesheet",
+								"68eb898b-eb77-4071-b156-c90c42c990d7",
+								""
+							],
+							"query": [
+								{
+									"key": "routeId",
+									"value": "f127468a-4f1b-49f7-8e15-34caa2cadf8e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/route/uuid/timesheet",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://cabinet.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/route/53395ffa-5bb2-4d5e-a441-2db5e3c3c42c/timesheet/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"route",
+								"53395ffa-5bb2-4d5e-a441-2db5e3c3c42c",
+								"timesheet",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "d7ff7d61-f842-4000-b50b-73220387b093",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/route/uuid/timesheet DOWNLOAD",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://cabinet.hackathon.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/route/53395ffa-5bb2-4d5e-a441-2db5e3c3c42c/timesheet/download/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"route",
+								"53395ffa-5bb2-4d5e-a441-2db5e3c3c42c",
+								"timesheet",
+								"download",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/route/uuid/timesheet update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://cabinet.hackathon.com",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"0049475f-4c26-41f5-be0b-043abe0150f1\",\n    \"timeSheetDate\": \"2024-10-21\",\n    \"dayType\": \"work\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8008/api/v1/route/a82067a4-49ec-4b8f-a8c3-d5588c888c95/timesheet/?userId=e67254b1-ce84-4ec2-a68c-8f6e728e91d2",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8008",
+							"path": [
+								"api",
+								"v1",
+								"route",
+								"a82067a4-49ec-4b8f-a8c3-d5588c888c95",
+								"timesheet",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "e67254b1-ce84-4ec2-a68c-8f6e728e91d2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Referer",
+						"value": "https://admin.hackathon.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"ekaterina.kulikova22@rambler.ru\",\n  \"name\": \"Ekaterina\",\n  \"password\": \"string\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8008/api/v1/auth/signup/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Referer",
+						"value": "https://admin.hackathon.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"login\": \"ekaterina.kulikova22@rambler.ru\",\n  \"password\": \"string\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8008/api/v1/auth/login/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Referer",
+						"value": "https://admin.hackathon.com",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:8008/api/v1/auth/logout/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"logout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "csrf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Referer",
+						"value": "https://admin.hackathon.com",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8008/api/v1/auth/csrf/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"csrf",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "password/request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"ekaterina.kulikova22@rambler.ru\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8008/api/v1/auth/password/request/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"password",
+						"request",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "password/reset",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"password\": \"2\",\n  \"code\": \"9878b782-0e14-4f46-823a-157ac1017eb3\",\n  \"csrf\": \"dda73b0d-20e2-4898-a78d-2119f2dbbd03\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8008/api/v1/auth/password/reset/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"password",
+						"reset",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"code\": \"41c7eb45-6036-4c18-b081-25a1d6aff023\",\n  \"csrf\": \"c72fad2c-f915-4143-ae9d-198212acf6b5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8008/api/v1/auth/email/confirm/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8008",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"email",
+						"confirm",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYWNjZXNzX3Rva2VuIiwiZXhwIjoxNzYzNDc3MDE4LCJpYXQiOjE3MzE5NDEwMTgsInN1YiI6ImU2NzI1NGIxLWNlODQtNGVjMi1hNjhjLThmNmU3MjhlOTFkMiJ9.5KyBfXMjjilAlUP1u6Q0vgDnVzTvLMScUw3LXco4cqNNJ5vBdt9TvlwSN6KTF7F7MQZRRAUDVz2GApxovN7WLw",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

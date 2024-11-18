@@ -1,0 +1,17 @@
+services:
+
+  email-consumer:
+    image: "${APP_EMAIL_CONSUMER_IMAGE_NAME}:${APP_EMAIL_CONSUMER_IMAGE_VERSION}"
+    restart: always
+    environment:
+      - RABBITMQ_DEFAULT_USER=${APP_MESSAGE_BROKER_USERNAME}
+      - RABBITMQ_DEFAULT_PASS=${APP_MESSAGE_BROKER_PASSWORD}
+      - RABBITMQ_HOST=${APP_MESSAGE_BROKER_HOST}
+      - RABBITMQ_PORT=${APP_MESSAGE_BROKER_PORT}
+      - EMAIL_CONSUMER_KEY=${APP_EMAIL_CONSUMER_KEY}
+      - EMAIL_URL=${APP_EMAIL_URL}
+
+networks:
+  default:
+    name: ${APP_PROXY_NETWORK}
+    external: true

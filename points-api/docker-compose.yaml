@@ -1,0 +1,18 @@
+services:
+
+  points-api:
+    image: "${APP_POINTS_API_IMAGE_NAME}:${APP_POINTS_API_IMAGE_VERSION}"
+    environment:
+      - DB_USERNAME=${APP_POINTS_DB_USERNAME}
+      - DB_PASSWORD=${APP_POINTS_DB_PASSWORD}
+      - DB_NAME=${APP_POINTS_DB_NAME}
+      - DB_PORT=${APP_POINTS_DB_PORT}
+      - DB_HOST=${APP_POINTS_DB_HOST}
+      - API_CONSUMER_KEY=${APP_POINTS_CONSUMER_KEY}
+    ports:
+      - 8009:8008
+
+networks:
+  default:
+    name: ${APP_PROXY_NETWORK}
+    external: true

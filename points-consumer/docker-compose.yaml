@@ -1,0 +1,17 @@
+services:
+
+  points-consumer:
+    image: "${APP_POINTS_CONSUMER_IMAGE_NAME}:${APP_POINTS_CONSUMER_IMAGE_VERSION}"
+    restart: always
+    environment:
+      - RABBITMQ_DEFAULT_USER=${APP_MESSAGE_BROKER_USERNAME}
+      - RABBITMQ_DEFAULT_PASS=${APP_MESSAGE_BROKER_PASSWORD}
+      - RABBITMQ_HOST=${APP_MESSAGE_BROKER_HOST}
+      - RABBITMQ_PORT=${APP_MESSAGE_BROKER_PORT}
+      - POINTS_CONSUMER_KEY=${APP_POINTS_CONSUMER_KEY}
+      - POINTS_URL=${APP_POINTS_URL}
+
+networks:
+  default:
+    name: ${APP_PROXY_NETWORK}
+    external: true

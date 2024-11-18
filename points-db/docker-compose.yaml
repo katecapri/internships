@@ -1,0 +1,18 @@
+services:
+
+  points-db:
+    image: "${APP_POINTS_DB_IMAGE_NAME}:${APP_POINTS_DB_IMAGE_VERSION}"
+    environment:
+      - POSTGRES_USER=${APP_POINTS_DB_USERNAME}
+      - POSTGRES_PASSWORD=${APP_POINTS_DB_PASSWORD}
+      - POSTGRES_DB=${APP_POINTS_DB_NAME}
+      - PGDATA=/var/lib/postgresql/data/external
+    volumes:
+      - "${APP_POINTS_DB_DATA_PATH}:/var/lib/postgresql/data/external"
+    ports:
+      - 5433:5432
+
+networks:
+  default:
+    name: ${APP_PROXY_NETWORK}
+    external: true

@@ -1,0 +1,18 @@
+services:
+
+  internships-db:
+    image: "${APP_DB_IMAGE_NAME}:${APP_DB_IMAGE_VERSION}"
+    environment:
+      - POSTGRES_USER=${APP_DB_USERNAME}
+      - POSTGRES_PASSWORD=${APP_DB_PASSWORD}
+      - POSTGRES_DB=${APP_DB_NAME}
+      - PGDATA=/var/lib/postgresql/data/external
+    volumes:
+      - "${APP_DB_DATA_PATH}:/var/lib/postgresql/data/external"
+    ports:
+      - 5432:5432
+
+networks:
+  default:
+    name: ${APP_PROXY_NETWORK}
+    external: true

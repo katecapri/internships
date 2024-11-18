@@ -1,0 +1,15 @@
+services:
+
+  email-migrations:
+    image: "${APP_EMAIL_MIGRATIONS_IMAGE_NAME}:${APP_EMAIL_MIGRATIONS_IMAGE_VERSION}"
+    environment:
+      - DB_USERNAME=${APP_EMAIL_DB_USERNAME}
+      - DB_PASSWORD=${APP_EMAIL_DB_PASSWORD}
+      - DB_NAME=${APP_EMAIL_DB_NAME}
+      - DB_PORT=${APP_EMAIL_DB_PORT}
+      - DB_HOST=${APP_EMAIL_DB_HOST}
+
+networks:
+  default:
+    name: ${APP_PROXY_NETWORK}
+    external: true

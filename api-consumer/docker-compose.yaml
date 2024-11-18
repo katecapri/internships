@@ -1,0 +1,17 @@
+services:
+
+  api-consumer:
+    image: "${APP_API_CONSUMER_IMAGE_NAME}:${APP_API_CONSUMER_IMAGE_VERSION}"
+    restart: always
+    environment:
+      - RABBITMQ_DEFAULT_USER=${APP_MESSAGE_BROKER_USERNAME}
+      - RABBITMQ_DEFAULT_PASS=${APP_MESSAGE_BROKER_PASSWORD}
+      - RABBITMQ_HOST=${APP_MESSAGE_BROKER_HOST}
+      - RABBITMQ_PORT=${APP_MESSAGE_BROKER_PORT}
+      - API_CONSUMER_KEY=${APP_API_CONSUMER_KEY}
+      - API_URL=${APP_API_URL}
+
+networks:
+  default:
+    name: ${APP_PROXY_NETWORK}
+    external: true

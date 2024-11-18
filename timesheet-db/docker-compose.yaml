@@ -1,0 +1,18 @@
+services:
+
+  timesheet-db:
+    image: "${APP_TIMESHEET_DB_IMAGE_NAME}:${APP_TIMESHEET_DB_IMAGE_VERSION}"
+    environment:
+      - POSTGRES_USER=${APP_TIMESHEET_DB_USERNAME}
+      - POSTGRES_PASSWORD=${APP_TIMESHEET_DB_PASSWORD}
+      - POSTGRES_DB=${APP_TIMESHEET_DB_NAME}
+      - PGDATA=/var/lib/postgresql/data/external
+    volumes:
+      - "${APP_TIMESHEET_DB_DATA_PATH}:/var/lib/postgresql/data/external"
+    ports:
+      - 5434:5432
+
+networks:
+  default:
+    name: ${APP_PROXY_NETWORK}
+    external: true

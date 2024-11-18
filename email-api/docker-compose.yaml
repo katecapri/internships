@@ -1,0 +1,20 @@
+services:
+
+  email-api:
+    image: "${APP_EMAIL_API_IMAGE_NAME}:${APP_EMAIL_API_IMAGE_VERSION}"
+    environment:
+      - DB_USERNAME=${APP_EMAIL_DB_USERNAME}
+      - DB_PASSWORD=${APP_EMAIL_DB_PASSWORD}
+      - DB_NAME=${APP_EMAIL_DB_NAME}
+      - DB_PORT=${APP_EMAIL_DB_PORT}
+      - DB_HOST=${APP_EMAIL_DB_HOST}
+      - API_CONSUMER_KEY=${APP_EMAIL_CONSUMER_KEY}
+      - SMTP_HOST=${APP_SMTP_HOST}
+      - SMTP_PORT=${APP_SMTP_PORT}
+      - SMTP_USERNAME=${APP_SMTP_USERNAME}
+      - SMTP_PASSWORD=${APP_SMTP_PASSWORD}
+
+networks:
+  default:
+    name: ${APP_PROXY_NETWORK}
+    external: true

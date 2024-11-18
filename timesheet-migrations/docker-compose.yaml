@@ -1,0 +1,15 @@
+services:
+
+  timesheet-migrations:
+    image: "${APP_TIMESHEET_MIGRATIONS_IMAGE_NAME}:${APP_TIMESHEET_MIGRATIONS_IMAGE_VERSION}"
+    environment:
+      - DB_USERNAME=${APP_TIMESHEET_DB_USERNAME}
+      - DB_PASSWORD=${APP_TIMESHEET_DB_PASSWORD}
+      - DB_NAME=${APP_TIMESHEET_DB_NAME}
+      - DB_PORT=${APP_TIMESHEET_DB_PORT}
+      - DB_HOST=${APP_TIMESHEET_DB_HOST}
+
+networks:
+  default:
+    name: ${APP_PROXY_NETWORK}
+    external: true

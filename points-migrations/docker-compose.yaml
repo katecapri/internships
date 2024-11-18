@@ -1,0 +1,15 @@
+services:
+
+  points-migrations:
+    image: "${APP_POINTS_MIGRATIONS_IMAGE_NAME}:${APP_POINTS_MIGRATIONS_IMAGE_VERSION}"
+    environment:
+      - DB_USERNAME=${APP_POINTS_DB_USERNAME}
+      - DB_PASSWORD=${APP_POINTS_DB_PASSWORD}
+      - DB_NAME=${APP_POINTS_DB_NAME}
+      - DB_PORT=${APP_POINTS_DB_PORT}
+      - DB_HOST=${APP_POINTS_DB_HOST}
+
+networks:
+  default:
+    name: ${APP_PROXY_NETWORK}
+    external: true
