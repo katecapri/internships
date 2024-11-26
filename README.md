@@ -1,8 +1,10 @@
 <h1 align="center">Backend портала стажировок</h1>
 
-
-  ![](https://github.com/katecapri/images-for-readme/blob/main/drf.png.png)  ![](https://github.com/katecapri/images-for-readme/blob/main/RabbitMQ.png)  ![](https://github.com/katecapri/images-for-readme/blob/main/docker.png)
-
+<p align="center">
+  <img src="https://github.com/katecapri/images-for-readme/blob/main/drf.png.png" />
+  <img src="https://github.com/katecapri/images-for-readme/blob/main/RabbitMQ.png" />
+  <img src="https://github.com/katecapri/images-for-readme/blob/main/docker.png" />
+</p>
 
 ##  Описание ##
 
